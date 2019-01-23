@@ -1,0 +1,34 @@
+# .bash_profile
+# @author Diwanshu Shekhar
+#
+# Personal environment variables and startup programs.
+#
+# Personal aliases and functions should go in ~/.bashrc.  System wide
+# environment variables and startup programs are in /etc/profile.
+# System wide aliases and functions are in /etc/bashrc.
+# 
+#
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+#User specific environment and startup programs
+export PATH=$HOME/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/java/default/bin
+
+export TERM=xterm-256color
+
+#setting java home env variable
+export JAVA_HOME=/usr/java/default
+
+#to prevent git from giving ask_pass: cannot open display error
+unset SSH_ASKPASS
+
+#setting classpath
+export CLASSPATH=$CLASSPATH:/opt/cloudera/parcels/CDH/jars/*
+
+#for Apache Oozie
+export OOZIE_URL=http://host.example.com:11000/oozie/
+
+#jars to be used in Hadoop MapReduce jobs
+export LIB_JARS=jar1.jar,jar2.jar
