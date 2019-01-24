@@ -1,0 +1,45 @@
+"Vundle Setup
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"
+" " alternatively, pass a path where Vundle should install plugins
+call vundle#begin('~/.vim/plugins')
+"
+" " let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+"
+" " Add all your plugins here (note older versions of Vundle used Bundle
+" instead of Plugin)
+" Plugin 'tmhedberg/SimpylFold'
+"" Bundle 'Valloric/YouCompleteMe'
+Plugin 'jnurmine/Zenburn'
+
+" " All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"vim native configuratiions
+"
+"This allows copy and paste between terminals
+set clipboard=unnamed
+
+" enable 256 color mode
+set t_Co=256
+
+" enable syntax highlighting
+syntax on
+
+" show line numbers
+set number
+
+" show the matching part of the pair for [] {} and ()
+set showmatch
+
+" plugin specific configs
+
+"automatically load zenburn color scheme
+ colors zenburn
